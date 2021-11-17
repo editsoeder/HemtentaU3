@@ -17,3 +17,10 @@ function getIndexOfID($data, $id){
     $index = array_search($id, $column);
     return $index;
 }
+
+//idk if this one is done but maybe
+function saveToFile ($filename, $data) {
+    //Saves the changes to the database
+    $json = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents($filename, $json);
+}
