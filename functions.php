@@ -167,3 +167,11 @@ function includeRelation( $apartments ){
     }
     return $apartments;
 }
+
+function checkAllFields($fields, $entry) {
+    //Check if all the fields needed are submitted
+    $entryKeys = array_keys($entry);
+    $result = array_diff($fields, $entryKeys);
+
+    return $result; 
+}
