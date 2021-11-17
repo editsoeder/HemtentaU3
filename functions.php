@@ -32,6 +32,17 @@ function isType ($type) {
     //use JSON
     $jsonFormat = header("Content-type: application/json");
     if ($type !== $jsonFormat) {
-        sendJSON(["message" => "Content type not allowed, please send data in JSON"], 400);
+        sendJSON(
+            [
+                "message" => "Content type not allowed, please send data in JSON"
+            ], 
+            400);
     }
+}
+
+function isMethod($method) {
+    //checks that the method sent by the server is the same as
+    //the method sent by the server
+    $requestMethod = $_SERVER["REQUEST_METHOD"];
+    return $method == $requestMethod;
 }
