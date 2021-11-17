@@ -6,7 +6,7 @@ function getJSON($filename){
     return json_decode(file_get_contents($filename), true);
 }
 
-/* 
+/*
 Searches array for ID.
 Returns index if found
 Returns false if no ID found.
