@@ -22,7 +22,7 @@ function limitResult( $number, $data ){
 
 /* 
 Takes an array with data and returns highest ID.
-
+If data arary is empty, returns 0.
 */
 
 function getMaxID( $data ){
@@ -33,3 +33,4 @@ function getMaxID( $data ){
     $maxID = max($column);
     return $maxID;
 }
+
