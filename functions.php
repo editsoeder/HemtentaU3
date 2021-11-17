@@ -45,3 +45,16 @@ function deleteEntry($filename, $id) {
     array_splice($data, $found, 1);
     saveToFile($filename, $data);
 }
+
+function sendJSON($message, $statuscode) {
+    //is used whenever something is successful 
+    // or goes wrong. exits the code
+
+    header("Content-Type: application/json");
+    http_response_code($statusCode);
+    $jsonMessage = json_encode($message);
+
+    echo($jsonMessage);
+    exit();
+}
+
