@@ -59,8 +59,8 @@ function sendJSON($message, $statuscode) {
 }
 
 function addEntry ($filename, $entry) {
-    // $newEntry is an array with all the data that should be added to the array
-
+    //takes the data the user submitted and makes them into
+    //a new entry in the database
     $userSentData = file_get_contents("php://input");
     $entry = json_decode($userSentData, true);
     // checkFields()
