@@ -34,3 +34,14 @@ function getMaxID( $data ){
     return $maxID;
 }
 
+/*
+Takes a key and corresponding value (eg "rooms", 2) and data array.
+Returns an array with data that has that value in that key.
+*/
+function filterBy( $key, $value, $data){
+    $filtered = array_filter( $data, function($entry) use ($key, $value) {
+            return $entry[$key] == $value;
+        }
+    );
+    return $filtered;
+}
