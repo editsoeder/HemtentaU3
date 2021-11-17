@@ -1,8 +1,6 @@
 <?php
 include_once "../functions.php";
 
-$directory = getDirectory();
-
 function getDirectory(){
     return explode( "/", dirname($_SERVER['PHP_SELF']) )[1];
 }
