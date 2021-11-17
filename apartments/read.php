@@ -1,22 +1,11 @@
 <?php
 include_once "../functions.php";
 
-function containsParam( $param ){
-    $dbKeys = array_keys(getJSON("apartments.json")[0]);
-
-    
-
-    var_dump(stripos("rooms", $param));
-
-    if( $param == 'ids' ){
-
-    }
-    if( $param == 'include' ){
-
-    }
-    if( $param == 'limit' ){
-
-    }
+function getDirectory(){
+    return explode( "/", dirname($_SERVER['PHP_SELF']) )[1];
 }
 
-containsParam( "rooms" );
+function containsParam( $param ){
+    $keys = array_keys($_GET);
+    return in_array($param, $keys);
+}
