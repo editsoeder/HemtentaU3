@@ -35,3 +35,13 @@ function isMethod($method) {
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     return $method == $requestMethod;
 }
+
+function deleteEntry($filename, $id) {
+    //takes the filename which it should delete from
+    //and ID which should be deleted
+    $id = $requestData["id"];
+    $data = getJSON($filename); 
+    $found = getIndexOfID($data, $id);
+    array_splice($data, $found, 1);
+    saveToFile($filename, $data);
+}
