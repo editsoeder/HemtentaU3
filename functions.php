@@ -18,6 +18,15 @@ function getIndexOfID($data, $id){
     return $index;
 }
 
+function getDirectory(){
+    return explode( "/", dirname($_SERVER['PHP_SELF']) )[1];
+}
+
+function containsParam( $param ){
+    $keys = array_keys($_GET);
+    return in_array($param, $keys);
+}
+
 function saveToFile ($filename, $data) {
     //Saves the changes to the database
     $json = json_encode($data, JSON_PRETTY_PRINT);
@@ -102,20 +111,6 @@ function editEntry ($filename, $entry) {
     }
     
     saveToFile( $filename, $data);
-
-    //takes filename for the file that should
-    //be edited and an array with the entered
-    //data. Entered data includes an ID for 
-    //which entry should be edited
-    //sendJSON() if successfull
-
-    // Input: { id, [first_name], [last_name], [email], [age] }
-    // Output: { id, first_name, last_name, email, age }
-    // Tar emot om en befintlig användare (baserat på `id`) och redigerar den utefter
-    // de andra fält som också var medskickade (t.ex. "first_name"). Tänk på att det
-    // ska gå att redigera flera fält på samma gång - så skickar jag med { id,
-    // first_name, age } så innebär det att jag redigerar förnamn samt ålder.
-    // använd checkfields för att se att id och minst ett till fält är ifyllt
 }
   
 /* Gets an entry from specified file by given ID.
