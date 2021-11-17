@@ -90,3 +90,19 @@ function addEntry ($filename, $entry) {
     saveToFile($filename, $data);
 }
 
+
+function editEntry ($filename, $entry) {
+    //takes filename for the file that should
+    //be edited and an array with the entered
+    //data. Entered data includes an ID for 
+    //which entry should be edited
+    //sendJSON() if successfull
+
+    // Input: { id, [first_name], [last_name], [email], [age] }
+    // Output: { id, first_name, last_name, email, age }
+    // Tar emot om en befintlig användare (baserat på `id`) och redigerar den utefter
+    // de andra fält som också var medskickade (t.ex. "first_name"). Tänk på att det
+    // ska gå att redigera flera fält på samma gång - så skickar jag med { id,
+    // first_name, age } så innebär det att jag redigerar förnamn samt ålder.
+    // använd checkfields för att se att id och minst ett till fält är ifyllt
+}
