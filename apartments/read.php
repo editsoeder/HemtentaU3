@@ -19,3 +19,17 @@ function limitResult( $number, $data ){
     $sliced = array_slice($data, 0, $number );
     return $sliced;
 }
+
+/* 
+Takes an array with data and returns highest ID.
+
+*/
+
+function getMaxID( $data ){
+    if( count($data) < 1 ) {
+        return 0;
+    }
+    $column = array_column($data, "id");
+    $maxID = max($column);
+    return $maxID;
+}
