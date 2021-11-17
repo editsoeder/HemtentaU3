@@ -45,3 +45,20 @@ function filterBy( $key, $value, $data){
     );
     return $filtered;
 }
+
+/*
+Takes the apartment array that should include tenants.
+Finds each tenant and pushes it inside the apartments array.
+Returns a new array with included tenants.
+*/
+function includeRelation( $apartments ){
+    foreach( $apartments as $key=>$apartment ){
+        $included = [];
+        foreach( $apartment["tenants"] as $tenantID ){
+            $tenant = getEntry( "../tenants/tenants.json", $tenantID );
+            array_push($included, $tenant);
+        }
+        $apartments[$key]["tenants"] = $included;
+    }
+    return $apartments;
+}
