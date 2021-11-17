@@ -24,3 +24,14 @@ function saveToFile ($filename, $data) {
     $json = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($filename, $json);
 }
+
+function isType ($type) {
+    //check content type of what someone sends the server
+    //so that its in fact content type json
+    //if not, sendJSON with message "Wrong format, please
+    //use JSON
+    $jsonFormat = header("Content-type: application/json");
+    if ($type !== $jsonFormat) {
+        sendJSON(["message" => "Content type not allowed, please send data in JSON"], 400);
+    }
+}
