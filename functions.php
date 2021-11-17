@@ -18,7 +18,6 @@ function getIndexOfID($data, $id){
     return $index;
 }
 
-//idk if this one is done but maybe
 function saveToFile ($filename, $data) {
     //Saves the changes to the database
     $json = json_encode($data, JSON_PRETTY_PRINT);
@@ -26,23 +25,13 @@ function saveToFile ($filename, $data) {
 }
 
 function isType ($type) {
-    //check content type of what someone sends the server
-    //so that its in fact content type json
-    //if not, sendJSON with message "Wrong format, please
-    //use JSON
-    $jsonFormat = header("Content-type: application/json");
-    if ($type !== $jsonFormat) {
-        sendJSON(
-            [
-                "message" => "Content type not allowed, please send data in JSON"
-            ], 
-            400);
-    }
+    //returns true if the content to the server is the type we want
+    return $type == $_SERVER["CONTENT-TYPE"];
 }
 
 function isMethod($method) {
-    //checks that the method sent by the server is the same as
-    //the method sent by the server
+    //returns true if the method sent to the server is the method
+    //we want/allow
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     return $method == $requestMethod;
 }
