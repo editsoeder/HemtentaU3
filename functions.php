@@ -58,3 +58,35 @@ function sendJSON($message, $statuscode) {
     exit();
 }
 
+function addEntry ($filename, $entry) {
+    // $newEntry is an array with all the data that should be added to the array
+
+    $userSentData = file_get_contents("php://input");
+    $entry = json_decode($userSentData, true);
+    // checkFields()
+
+    if($filename == "apartments.json") {
+        $newEntry = [
+            $address = $entry["address"],
+            $city = $entry["city"],
+            $tenants = $entry["tenants"],
+            $landlord = $entry["landlord"],
+            $rooms = $entry["rooms"]
+        ];
+    }
+
+    if($filename == "tenants.json") {
+        $newEntry = [
+            $id = getMaxID($data) + 1,
+            $firstName = $entry["first_name"],
+            $lastName = $entry["last_name"],
+            $email = $entry["email"],
+            $gender = $entry["gender"],
+        ];
+    }
+
+    array_push($data, $newEntry);
+
+    saveToFile($filename, $data);
+}
+
