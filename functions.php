@@ -18,9 +18,20 @@ function getIndexOfID($data, $id){
     return $index;
 }
 
-//idk if this one is done but maybe
 function saveToFile ($filename, $data) {
     //Saves the changes to the database
     $json = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents($filename, $json);
+}
+
+function isType ($type) {
+    //returns true if the content to the server is the type we want
+    return $type == $_SERVER["CONTENT-TYPE"];
+}
+
+function isMethod($method) {
+    //returns true if the method sent to the server is the method
+    //we want/allow
+    $requestMethod = $_SERVER["REQUEST_METHOD"];
+    return $method == $requestMethod;
 }
