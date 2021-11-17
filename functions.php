@@ -92,6 +92,17 @@ function addEntry ($filename, $entry) {
 
 
 function editEntry ($filename, $entry) {
+    $data = getJSON( $filename );
+    $id = $entry["id"];
+    $index = getIndexOfID($data, $id);
+    $entryKeys = array_keys($entry);
+
+    foreach( $entryKeys as $key ){
+        $data[$index][$key] = $entry[$key];
+    }
+    
+    saveToFile( $filename, $data);
+
     //takes filename for the file that should
     //be edited and an array with the entered
     //data. Entered data includes an ID for 
