@@ -35,7 +35,7 @@ function saveToFile ($filename, $data) {
 
 function isType ($type) {
     //returns true if the content to the server is the type we want
-    return $type == $_SERVER["CONTENT-TYPE"];
+    return $type == $_SERVER["CONTENT_TYPE"];
 }
 
 function isMethod($method) {
@@ -77,6 +77,7 @@ function addEntry ($filename, $entry) {
 
     if($filename == "apartments.json") {
         $newEntry = [
+            "id" => getMaxID($data) + 1,
             "address" => $entry["address"],
             "city" => $entry["city"],
             "tenants" => $entry["tenants"],
