@@ -5,7 +5,12 @@ $directory = getDirectory();
 
 if (isMethod("POST")) {
     if (isType("application/json")) {
-        $entry = json_decode(file_get_contents("php://input"), true);
+        $entry = json_decode(file_get_contents("php://input"),true);
+
+        if(is_null($entry) ){
+            sendJSON(["message" => "Bad Request"], 400);
+            exit();
+        }
 
         $fields = [
             "address", 
@@ -13,7 +18,7 @@ if (isMethod("POST")) {
             "tenants", 
             "rooms"
         ];
-
+        
         if(checkAllFields($fields, $entry)) {
             sendJSON(["message" => "Missing key"], 400);
             exit();
@@ -23,7 +28,7 @@ if (isMethod("POST")) {
             sendJSON(["message" => "All fields must be filled in"], 400);
             exit();
         }
-        addEntry("$directory.json", $entry);
+        //addEntry("$directory.json", $entry);
         sendJSON(["Message" => "Apartment created", "Apartment" => $entry], 200);
         exit();
     } else {
