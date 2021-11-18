@@ -183,3 +183,16 @@ function checkAllFields($fields, $entry) {
     return $result; 
 }
 
+function checkSomeFields( $fields, $entry ){
+    $entryKeys = array_keys($entry);
+    foreach( $entryKeys as $entryKey ){
+        if( ! in_array($entryKey, $fields) ){
+            return false;
+        }
+    }
+    if( count(array_diff( $fields, $entryKeys ) < count($fields) -1 || count($entryKeys) < 2 ) ){
+        return false;
+    }
+
+    return true;
+}
