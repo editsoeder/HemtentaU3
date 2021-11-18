@@ -196,3 +196,12 @@ function checkSomeFields( $fields, $entry ){
 
     return true;
 }
+
+function allFieldsSet( $entry ) {
+    foreach( $entry as $field ){
+        if ( $field == "" ){
+            return false;
+        }
+    }
+    return true;
+}
