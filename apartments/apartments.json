@@ -248,5 +248,15 @@
         ],
         "landlord": "Stracke-Waters",
         "rooms": 2
+    },
+    {
+        "id": 35,
+        "address": "Wisteria Lane",
+        "city": "Alabama",
+        "tenants": [
+            1
+        ],
+        "landlord": "Jenny",
+        "rooms": 2
     }
 ]
