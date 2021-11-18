@@ -29,7 +29,7 @@ if (isMethod("PATCH")) {
             sendJSON(["message" => "The fields must be filled in"], 400);
             exit();
         }
-
+        
         editEntry("$directory.json", $entry);
         sendJSON(["message" => "Entry edited", "Entry:" => $entry], 200);
         exit();

@@ -50,6 +50,12 @@ function deleteEntry($filename, $id) {
     //from and ID which should be deleted
     $data = getJSON($filename); 
     $found = getIndexOfID($data, $id);
+    
+    if ($found === false) { 
+        sendJSON(["message" => "Entry not found"], 404);
+        exit();
+    }
+
     array_slice($data, $found, 1);
     saveToFile($filename, $data);
 }
@@ -105,12 +111,17 @@ function editEntry ($filename, $entry) {
     $data = getJSON( $filename );
     $id = $entry["id"];
     $index = getIndexOfID($data, $id);
+    if ($index === false) { 
+        sendJSON(["message" => "Entry not found"], 404);
+        exit();
+    }
+
     $entryKeys = array_keys($entry);
 
     foreach( $entryKeys as $key ){
         $data[$index][$key] = $entry[$key];
     }
-    
+
     saveToFile( $filename, $data);
 }
   
@@ -121,6 +132,9 @@ Returns NULL if no entry found.
 function getEntry($filename, $id){
     $data = getJSON($filename);
     $index = getIndexOfID($data, $id);
+    if ($index === false) { 
+        sendJSON(["message" => "Entry not found"], 404);
+    }
     return $data[$index];
 }
 
