@@ -256,5 +256,21 @@
         "tenants": null,
         "landlord": null,
         "rooms": null
+    },
+    {
+        "id": 37,
+        "address": null,
+        "city": null,
+        "tenants": null,
+        "landlord": null,
+        "rooms": null
+    },
+    {
+        "id": 38,
+        "address": null,
+        "city": null,
+        "tenants": null,
+        "landlord": null,
+        "rooms": null
     }
 ]
