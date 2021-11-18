@@ -180,40 +180,5 @@
         "last_name": "Possible",
         "email": "kim-possible@email.com",
         "gender": "Female"
-    },
-    {
-        "id": 32,
-        "first_name": "Kim",
-        "last_name": "Possible",
-        "email": "kim-possible@email.com",
-        "gender": "Female"
-    },
-    {
-        "id": 33,
-        "first_name": "Kim",
-        "last_name": "Possible",
-        "email": "kim-possible@email.com",
-        "gender": "Female"
-    },
-    {
-        "id": 34,
-        "first_name": "Kim",
-        "last_name": "Possible",
-        "email": "kim-possible@email.com",
-        "gender": "Female"
-    },
-    {
-        "id": 35,
-        "first_name": "Kim",
-        "last_name": "Possible",
-        "email": "kim-possible@email.com",
-        "gender": "Female"
-    },
-    {
-        "id": 36,
-        "first_name": "Other name",
-        "last_name": "Possible",
-        "email": "kim-possible@email.com",
-        "gender": "Female"
     }
 ]
