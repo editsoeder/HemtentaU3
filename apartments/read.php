@@ -1,3 +1,47 @@
 <?php
-include_once "../functions.php";
+require_once "../functions.php";
 
+if (isMethod("GET")) {
+    $directory = getDirectory(); 
+    $data = [];
+
+    if (containsParam("id")) {
+        $id = $_GET["id"];
+        $data = getEntry("$directory.json", $id);
+
+    } elseif (containsParam("ids")) {
+        $ids = explode(",", $_GET["ids"]);
+
+        foreach($ids as $id) {
+            array_push($data, getEntry("$directory.json", $id));
+        }
+    } else {
+        $data = getJSON("$directory.json");
+    }
+
+    if (containsParam("limit")) {
+        $limit = $_GET["limit"];
+        $data = limitResult($limit, $data); 
+    }
+
+    if (containsParam("include")) {
+        $data = includeRelation($data);
+    }
+
+    $dataKeys = array_keys($data[0]);
+
+    foreach( $dataKeys as $key ){
+        if( $key == "id" ){
+            continue;
+        }
+        if( containsParam( $key ) ){
+            $value = $_GET[$key];
+            $data = filterBy($key, $value, $data );
+        }
+    }
+
+    sendJSON ( [ $directory => $data ] , 200);
+
+} else {
+    sendJSON();
+}
