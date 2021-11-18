@@ -91,13 +91,6 @@
         "gender": "Bigender"
     },
     {
-        "id": 19,
-        "first_name": "Aliza",
-        "last_name": "Feathers",
-        "email": "afeathersi@eventbrite.com",
-        "gender": "Male"
-    },
-    {
         "id": 20,
         "first_name": "Bonnee",
         "last_name": "Petroulis",
@@ -173,12 +166,5 @@
         "last_name": "Faithfull",
         "email": "wfaithfullt@archive.org",
         "gender": "Male"
-    },
-    {
-        "id": 31,
-        "first_name": "Kim",
-        "last_name": "Possible",
-        "email": "kim-possible@email.com",
-        "gender": "Female"
     }
 ]

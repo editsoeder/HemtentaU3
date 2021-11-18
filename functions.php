@@ -48,7 +48,7 @@ function isMethod($method) {
 function deleteEntry($filename, $id) {
     //takes the filename which it should delete 
     //from and ID which should be deleted
-    $data = getJSON($filename); 
+    $data = getJSON($filename);
     $found = getIndexOfID($data, $id);
     
     if ($found === false) { 
@@ -56,7 +56,7 @@ function deleteEntry($filename, $id) {
         exit();
     }
 
-    array_slice($data, $found, 1);
+    array_splice($data, $found, 1);
     saveToFile($filename, $data);
 }
 
