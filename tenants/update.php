@@ -16,7 +16,7 @@ if( isMethod("PATCH") ){
         ];
 
         if ( ! isset($entry["id"]) ){
-            sendJSON(["message"=>"ID MISSING"],400);
+            sendJSON(["message"=>"Missing ID"],400);
             exit();
         }
         if( ! checkSomeFields( $fields, $entry ) ){
@@ -28,6 +28,7 @@ if( isMethod("PATCH") ){
             exit();
         }
         editEntry("$directory.json", $entry);
+        sendJSON(["message" => "Entry edited", "Entry:" => $entry], 200);
         exit();
     }else{
         sendJSON(["message"=>"Wrong content-type"], 400);

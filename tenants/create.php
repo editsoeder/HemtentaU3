@@ -24,7 +24,7 @@ if( isMethod("POST") ){
             exit();
         }
         addEntry("$directory.json", $entry);
-        sendJSON( [ $directory=>$entry ] , 200);
+        sendJSON(["Message" => "Tenant created", "Apartment" => $entry], 200) ;
         exit();
 
     }else{

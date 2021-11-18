@@ -19,8 +19,6 @@ if (isMethod("GET")) {
         $data = getJSON("$directory.json");
     }
 
-    
-
     if (containsParam("include")) {
         $data = includeRelation($data);
     }

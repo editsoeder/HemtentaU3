@@ -12,6 +12,8 @@ if (isMethod("DELETE")) {
         }
         
         deleteEntry("$directory.json", $entry["id"]);
+        sendJSON(["message" => "Entry deleted", "Entry:" => $entry], 200);
+        exit();
     
     } else { 
         sendJSON(["message" => "Wrong content type"], 400);

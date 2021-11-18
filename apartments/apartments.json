@@ -248,5 +248,43 @@
         ],
         "landlord": "Stracke-Waters",
         "rooms": 2
+    },
+    {
+        "id": 32,
+        "address": null,
+        "city": null,
+        "tenants": null,
+        "landlord": null,
+        "rooms": null
+    },
+    {
+        "id": 33,
+        "address": "49 Brickson Park Place",
+        "city": "Kuzhorskaya",
+        "tenants": [
+            7
+        ],
+        "landlord": "Stracke-Waters",
+        "rooms": 2
+    },
+    {
+        "id": 34,
+        "address": "49 Brickson Park Place",
+        "city": "Kuzhorskaya",
+        "tenants": [
+            7
+        ],
+        "landlord": "Stracke-Waters",
+        "rooms": 2
+    },
+    {
+        "id": 35,
+        "address": "49 Brickson Park Place",
+        "city": "Kuzhorskaya",
+        "tenants": [
+            7
+        ],
+        "landlord": "Stracke-Waters",
+        "rooms": 2
     }
 ]

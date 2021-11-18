@@ -31,7 +31,7 @@ if (isMethod("PATCH")) {
         }
 
         editEntry("$directory.json", $entry);
-        sendJSON([$directory => $entry], 200);
+        sendJSON(["message" => "Entry edited", "Entry:" => $entry], 200);
         exit();
 
     } else {

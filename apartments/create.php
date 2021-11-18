@@ -22,7 +22,7 @@ if (isMethod("POST")) {
             sendJSON(["message" => "All fields must be filled in"], 400);
         }
         addEntry("$directory.json", $entry);
-        sendJSON([$directory => $entry], 200) ;
+        sendJSON(["Message" => "Apartment created", "Apartment" => $entry], 200) ;
     } else {
         sendJSON(["message" => "Wrong content-type"], 400);
     }
