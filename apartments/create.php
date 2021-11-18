@@ -16,18 +16,23 @@ if (isMethod("POST")) {
 
         if(checkAllFields($fields, $entry)) {
             sendJSON(["message" => "Missing key"], 400);
+            exit();
         }
 
         if ( ! allFieldsSet($entry)) {
             sendJSON(["message" => "All fields must be filled in"], 400);
+            exit();
         }
         addEntry("$directory.json", $entry);
-        sendJSON(["Message" => "Apartment created", "Apartment" => $entry], 200) ;
+        sendJSON(["Message" => "Apartment created", "Apartment" => $entry], 200);
+        exit();
     } else {
         sendJSON(["message" => "Wrong content-type"], 400);
+        exit();
     }
 } else {
     sendJSON(["message" => "Wrong method"], 405);
+    exit();
 }
 
 ?>

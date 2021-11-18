@@ -248,5 +248,13 @@
         ],
         "landlord": "Jenny",
         "rooms": 2
+    },
+    {
+        "id": 36,
+        "address": null,
+        "city": null,
+        "tenants": null,
+        "landlord": null,
+        "rooms": null
     }
 ]
