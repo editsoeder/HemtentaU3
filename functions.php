@@ -154,11 +154,12 @@ function filterBy( $key, $value, $data){
     $key = strtolower($key);
     $value = strtolower($value);
     $filtered = array_filter( $data, function($entry) use ($key, $value) {
-            return $entry[$key] == $value;
+            return strtolower($entry[$key]) == $value;
         }
     );
     return $filtered;
 }
+
 
 /*
 Takes the apartment array that should include tenants.

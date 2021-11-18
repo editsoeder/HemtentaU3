@@ -17,9 +17,7 @@ if ( isMethod("GET") ) {
         $data = getJSON("$directory.json");
     }
 
-    $dataKeys = array_keys($data);
-
-    
+    $dataKeys = array_keys($data[0]);
 
     foreach( $dataKeys as $key ){
         if( $key == "id" ){
