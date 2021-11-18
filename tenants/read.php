@@ -21,10 +21,7 @@ if ( isMethod("GET") ) {
 
     $dataKeys = array_keys($data[0]);
 
-    if( containsParam( "limit" ) ){
-        $limit = $_GET["limit"];
-        $data = limitResult($limit, $data);
-    }
+    
 
     foreach( $dataKeys as $key ){
         if( $key == "id" ){
@@ -34,6 +31,11 @@ if ( isMethod("GET") ) {
             $value = $_GET[$key];
             $data = filterBy($key, $value, $data );
         }
+    }
+    
+    if( containsParam( "limit" ) ){
+            $limit = $_GET["limit"];
+            $data = limitResult($limit, $data);
     }
 
     sendJSON( [ $directory=>$data ] , 200);
