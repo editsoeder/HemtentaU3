@@ -55,7 +55,7 @@ function deleteEntry($filename, $id) {
     saveToFile($filename, $data);
 }
 
-function sendJSON($message, $statuscode) {
+function sendJSON($message, $statusCode) {
     //is used whenever something is successful 
     // or goes wrong. exits the code
 
