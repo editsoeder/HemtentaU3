@@ -7,7 +7,7 @@ if ( isMethod("GET") ) {
     $data = [];
     if( containsParam( "id" ) ){
         $id = $_GET["id"];
-        $data = getEntry( "$directory.json", $id );
+        $data[] = getEntry( "$directory.json", $id );
     }elseif( containsParam( "ids" ) ){
         $ids = explode(",", $_GET["ids"]);
         foreach( $ids as $id ){
@@ -17,9 +17,7 @@ if ( isMethod("GET") ) {
         $data = getJSON("$directory.json");
     }
 
-    $dataKeys = array_keys($data);
-
-    
+    $dataKeys = array_keys($data[0]);
 
     foreach( $dataKeys as $key ){
         if( $key == "id" ){
@@ -38,5 +36,5 @@ if ( isMethod("GET") ) {
 
     sendJSON( [ $directory=>$data ] , 200);
 } else{
-    sendJSON(["message"=>"Method not allowed"], 400);
+    sendJSON(["message"=>"Method not allowed"], 405);
 }

@@ -9,13 +9,13 @@ if (isMethod("GET")) {
         $id = $_GET["id"];
         $data = getEntry("$directory.json", $id);
 
-    } elseif (containsParam("ids")) {
+    }   elseif (containsParam("ids")) {
         $ids = explode(",", $_GET["ids"]);
 
-        foreach($ids as $id) {
-            array_push($data, getEntry("$directory.json", $id));
-        }
-    } else {
+            foreach($ids as $id) {
+                array_push($data, getEntry("$directory.json", $id));
+            }
+        } else {    
         $data = getJSON("$directory.json");
     }
 
@@ -43,5 +43,5 @@ if (isMethod("GET")) {
     sendJSON ( [ $directory => $data ] , 200);
 
 } else {
-    sendJSON();
+    sendJSON(["message" => "Method not allowed"], 405);
 }

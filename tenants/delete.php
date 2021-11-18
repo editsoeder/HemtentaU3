@@ -8,8 +8,10 @@ if( isMethod("DELETE") ){
     if( isType("application/json") ){
         $entry = json_decode(file_get_contents("php://input"),true);
         if ( ! isset($entry["id"]) ){
-            sendJSON(["message"=>"ID MISSING"],400);
+
+            sendJSON(["message"=>"Missing ID"],404);
             exit();
+
         }
         deleteEntry("$directory.json", $entry["id"]);
         sendJSON(["message" => "Entry deleted", "Entry:" => $entry], 200);
@@ -19,6 +21,6 @@ if( isMethod("DELETE") ){
         exit();
     }
 }else{
-    sendJSON(["message"=>"Wrong Method"], 405);
+    sendJSON(["message"=>"Method not allowed"], 405);
     exit();
 }
