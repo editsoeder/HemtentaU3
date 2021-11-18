@@ -23,7 +23,7 @@ if (isMethod("GET")) {
         $data = includeRelation($data);
     }
 
-    $dataKeys = array_keys($data);
+    $dataKeys = array_keys($data[0]);
 
     foreach( $dataKeys as $key ){
         if( $key == "id" ){
