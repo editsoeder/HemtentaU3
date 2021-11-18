@@ -1,15 +1,5 @@
 [
     {
-        "id": 1,
-        "address": "Private drive 4",
-        "city": "Kaka",
-        "tenants": [
-            25
-        ],
-        "landlord": "Harris-Gaylord",
-        "rooms": 2
-    },
-    {
         "id": 8,
         "address": "7 Portage Road",
         "city": "Ciego de \u00c1vila",

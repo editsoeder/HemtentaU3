@@ -7,7 +7,7 @@ if (isMethod("GET")) {
 
     if (containsParam("id")) {
         $id = $_GET["id"];
-        $data = getEntry("$directory.json", $id);
+        $data[] = getEntry("$directory.json", $id);
 
     }   elseif (containsParam("ids")) {
         $ids = explode(",", $_GET["ids"]);
