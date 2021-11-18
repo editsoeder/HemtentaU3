@@ -7,10 +7,9 @@ $directory = getDirectory();
 if( isMethod("DELETE") ){
     if( isType("application/json") ){
         $entry = json_decode(file_get_contents("php://input"),true);
-        var_dump($entry);
-
         if ( ! isset($entry["id"]) ){
             sendJSON(["message"=>"ID MISSING"],400);
+            exit();
         }
         deleteEntry("$directory.json", $entry["id"]);
         exit();
