@@ -1,8 +1,6 @@
 <?php
 require_once "../functions.php";
 
-error_reporting(-1);
-
 $directory = getDirectory();
 
 if ( isMethod("GET") ) {
@@ -19,7 +17,7 @@ if ( isMethod("GET") ) {
         $data = getJSON("$directory.json");
     }
 
-    $dataKeys = array_keys($data[0]);
+    $dataKeys = array_keys($data);
 
     
 
