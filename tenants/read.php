@@ -23,7 +23,6 @@ if ( isMethod("GET") ) {
         if( $key == "id" ){
             continue;
         }
-        $key = strtolower($key);
         if( containsParam( $key ) ){
             $value = $_GET[$key];
             $data = filterBy($key, $value, $data );
