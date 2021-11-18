@@ -10,7 +10,7 @@ if( isMethod("DELETE") ){
         var_dump($entry);
 
         if ( ! isset($entry["id"]) ){
-            sendJSON(["message"=>"ID MISSING"],400);
+            sendJSON(["message"=>"Missing ID"],404);
         }
         deleteEntry("$directory.json", $entry["id"]);
         exit();
@@ -19,6 +19,6 @@ if( isMethod("DELETE") ){
         exit();
     }
 }else{
-    sendJSON(["message"=>"Wrong Method"], 405);
+    sendJSON(["message"=>"Method not allowed"], 405);
     exit();
 }
