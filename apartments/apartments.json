@@ -1,15 +1,5 @@
 [
     {
-        "id": 1,
-        "address": "Private drive 4",
-        "city": "Kaka",
-        "tenants": [
-            25
-        ],
-        "landlord": "Harris-Gaylord",
-        "rooms": 2
-    },
-    {
         "id": 8,
         "address": "7 Portage Road",
         "city": "Ciego de \u00c1vila",
@@ -248,5 +238,23 @@
         ],
         "landlord": "Stracke-Waters",
         "rooms": 2
+    },
+    {
+        "id": 32,
+        "address": "49 Brickson Park Place",
+        "city": "Kuzhorskaya",
+        "tenants": [
+            7
+        ],
+        "landlord": "Stracke-Waters",
+        "rooms": 2
+    },
+    {
+        "id": 33,
+        "address": null,
+        "city": null,
+        "tenants": null,
+        "landlord": null,
+        "rooms": null
     }
 ]

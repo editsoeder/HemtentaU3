@@ -182,9 +182,16 @@ Returns a new array with included tenants.
 function includeRelation( $apartments ){
     foreach( $apartments as $key=>$apartment ){
         $included = [];
+        $data = getJSON("../tenants/tenants.json");
         foreach( $apartment["tenants"] as $tenantID ){
-            $tenant = getEntry( "../tenants/tenants.json", $tenantID );
-            array_push($included, $tenant);
+            $tenantExists = getIndexOfID( $data ,$tenantID);
+            if( $tenantExists != false ){
+                $tenant = getEntry( "../tenants/tenants.json", $tenantID );
+                array_push($included, $tenant);
+            }else{
+                array_push($included, "No tenants");
+            }
+            
         }
         $apartments[$key]["tenants"] = $included;
     }
