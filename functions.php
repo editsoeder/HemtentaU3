@@ -39,15 +39,15 @@ function isType ($type) {
 }
 
 function isMethod($method) {
-    //returns true if the method sent to the server is the method
-    //we want/allow
+    //returns true if the method sent to the 
+    //server is the method we want/allow
     $requestMethod = $_SERVER["REQUEST_METHOD"];
     return $method == $requestMethod;
 }
 
 function deleteEntry($filename, $id) {
-    //takes the filename which it should delete from
-    //and ID which should be deleted
+    //takes the filename which it should delete 
+    //from and ID which should be deleted
     $id = $requestData["id"];
     $data = getJSON($filename); 
     $found = getIndexOfID($data, $id);
