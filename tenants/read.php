@@ -38,5 +38,5 @@ if ( isMethod("GET") ) {
 
     sendJSON( [ $directory=>$data ] , 200);
 } else{
-    sendJSON(["message"=>"Method not allowed"], 400);
+    sendJSON(["message"=>"Method not allowed"], 405);
 }

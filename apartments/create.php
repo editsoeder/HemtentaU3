@@ -15,7 +15,7 @@ if (isMethod("POST")) {
         ];
 
         if(checkAllFields($fields, $entry)) {
-            sendJSON(["message" => "Missing fields"], 400);
+            sendJSON(["message" => "Missing key"], 400);
         }
 
         if ( ! allFieldsSet($entry)) {
