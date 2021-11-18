@@ -50,7 +50,7 @@ function deleteEntry($filename, $id) {
     //from and ID which should be deleted
     $data = getJSON($filename); 
     $found = getIndexOfID($data, $id);
-    array_splice($data, $found, 1);
+    array_slice($data, $found, 1);
     saveToFile($filename, $data);
 }
 
@@ -192,7 +192,8 @@ function checkSomeFields( $fields, $entry ){
             return false;
         }
     }
-    if( count($entryKeys) < 2 ){
+ 
+    if( count($entryKeys) < 2  ){
         return false;
     }
 
