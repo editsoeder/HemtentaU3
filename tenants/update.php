@@ -8,6 +8,7 @@ if( isMethod("PATCH") ){
     if( isType("application/json") ){
         $entry = json_decode(file_get_contents("php://input"),true);
         $fields = [
+            "id",
             "first_name", 
             "last_name", 
             "gender", 
@@ -26,7 +27,7 @@ if( isMethod("PATCH") ){
             sendJSON(["message"=>"All fields must be filled in"], 400);
             exit();
         }
-        editEntry("$directory.json", $entry["id"]);
+        editEntry("$directory.json", $entry);
         exit();
     }else{
         sendJSON(["message"=>"Wrong content-type"], 400);
