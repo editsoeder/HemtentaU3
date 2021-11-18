@@ -192,7 +192,7 @@ function checkSomeFields( $fields, $entry ){
             return false;
         }
     }
-    if( count(array_diff( $fields, $entryKeys ) < count($fields) -1 || count($entryKeys) < 2 ) ){
+    if( count($entryKeys) < 2  ){
         return false;
     }
 
