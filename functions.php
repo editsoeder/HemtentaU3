@@ -192,6 +192,7 @@ function checkSomeFields( $fields, $entry ){
             return false;
         }
     }
+ 
     if( count($entryKeys) < 2  ){
         return false;
     }
