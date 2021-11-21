@@ -248,6 +248,15 @@
         ],
         "landlord": "Jenny",
         "rooms": 2
-
+    },
+    {
+        "id": 36,
+        "address": "49 Brickson Park Place",
+        "city": "Kuzhorskaya",
+        "tenants": [
+            7
+        ],
+        "landlord": "Stracke-Waters",
+        "rooms": 2
     }
 ]

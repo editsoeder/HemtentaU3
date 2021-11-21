@@ -2,6 +2,7 @@
 require_once("../functions.php");
 
 $directory = getDirectory();
+$tenants = getJSON("../tenants/tenants.json");
 
 if (isMethod("POST")) {
     if (isType("application/json")) {
@@ -28,7 +29,15 @@ if (isMethod("POST")) {
             sendJSON(["message" => "All fields must be filled in"], 400);
             exit();
         }
-        //addEntry("$directory.json", $entry);
+
+        $tenantsIDS = $entry["tenants"];
+        foreach( $tenantsIDS as $tenantID ){
+            if ( getIndexOfID( $tenants ,$tenantID ) == false ){
+                sendJSON(["Message" => "The selected tenant does not exist"], 404);
+            }
+        }
+
+        addEntry("$directory.json", $entry);
         sendJSON(["Message" => "Apartment created", "Apartment" => $entry], 200);
         exit();
     } else {
