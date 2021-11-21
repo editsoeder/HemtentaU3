@@ -1,262 +1,30 @@
-[
-    {
-        "id": 8,
-        "address": "7 Portage Road",
-        "city": "Ciego de \u00c1vila",
-        "tenants": [
-            30
-        ],
-        "landlord": "Kshlerin, Mueller and Bosco",
-        "rooms": 4
-    },
-    {
-        "id": 9,
-        "address": "1 Del Mar Trail",
-        "city": "Doghs",
-        "tenants": [
-            17
-        ],
-        "landlord": "Ziemann Group",
-        "rooms": 1
-    },
-    {
-        "id": 10,
-        "address": "04626 Sutteridge Terrace",
-        "city": "Kebonkai",
-        "tenants": [
-            18
-        ],
-        "landlord": "Schumm and Sons",
-        "rooms": 4
-    },
-    {
-        "id": 11,
-        "address": "9504 Bultman Terrace",
-        "city": "Rivadavia",
-        "tenants": [
-            3
-        ],
-        "landlord": "Hand, Kreiger and Bode",
-        "rooms": 4
-    },
-    {
-        "id": 12,
-        "address": "67737 Cody Park",
-        "city": "Bandhagen",
-        "tenants": [
-            4
-        ],
-        "landlord": "Beer, Cummerata and Jenkins",
-        "rooms": 5
-    },
-    {
-        "id": 13,
-        "address": "04893 Artisan Street",
-        "city": "Koundara",
-        "tenants": [
-            25
-        ],
-        "landlord": "Smith-Botsford",
-        "rooms": 1
-    },
-    {
-        "id": 14,
-        "address": "9 Summer Ridge Hill",
-        "city": "Montpellier",
-        "tenants": [
-            25
-        ],
-        "landlord": "Bartoletti Group",
-        "rooms": 4
-    },
-    {
-        "id": 15,
-        "address": "45352 Vahlen Terrace",
-        "city": "Labo",
-        "tenants": [
-            13
-        ],
-        "landlord": "Harris, Baumbach and Johnston",
-        "rooms": 5
-    },
-    {
-        "id": 16,
-        "address": "68 6th Point",
-        "city": "Nashville",
-        "tenants": [
-            16
-        ],
-        "landlord": "Borer, Tillman and Hyatt",
-        "rooms": 5
-    },
-    {
-        "id": 17,
-        "address": "610 Esch Avenue",
-        "city": "Dukuhmencek Lor",
-        "tenants": [
-            10
-        ],
-        "landlord": "Ankunding Inc",
-        "rooms": 4
-    },
-    {
-        "id": 18,
-        "address": "1 Old Shore Center",
-        "city": "Xinsheng",
-        "tenants": [
-            2
-        ],
-        "landlord": "Dach, Robel and Nicolas",
-        "rooms": 1
-    },
-    {
-        "id": 19,
-        "address": "45981 Merchant Hill",
-        "city": "Tangxing",
-        "tenants": [
-            25
-        ],
-        "landlord": "Murray, Gutkowski and Miller",
-        "rooms": 1
-    },
-    {
-        "id": 20,
-        "address": "277 Green Ridge Lane",
-        "city": "\u0100sht\u012b\u0101n",
-        "tenants": [
-            28
-        ],
-        "landlord": "Emmerich, Maggio and Erdman",
-        "rooms": 1
-    },
-    {
-        "id": 21,
-        "address": "86 Monterey Street",
-        "city": "Kabba",
-        "tenants": [
-            13
-        ],
-        "landlord": "Collier-Bernhard",
-        "rooms": 4
-    },
-    {
-        "id": 22,
-        "address": "5 Armistice Park",
-        "city": "Youxi",
-        "tenants": [
-            0
-        ],
-        "landlord": "Gusikowski-Aufderhar",
-        "rooms": 1
-    },
-    {
-        "id": 23,
-        "address": "007 High Crossing Alley",
-        "city": "Huainan",
-        "tenants": [
-            30
-        ],
-        "landlord": "Stokes-Terry",
-        "rooms": 3
-    },
-    {
-        "id": 24,
-        "address": "36 Eastlawn Drive",
-        "city": "Magnitka",
-        "tenants": [
-            21
-        ],
-        "landlord": "Skiles, Hettinger and Kessler",
-        "rooms": 1
-    },
-    {
-        "id": 25,
-        "address": "1822 Hansons Hill",
-        "city": "Kepuh",
-        "tenants": [
-            24
-        ],
-        "landlord": "Durgan LLC",
-        "rooms": 2
-    },
-    {
-        "id": 26,
-        "address": "8 Magdeline Avenue",
-        "city": "\u00dajezd",
-        "tenants": [
-            7
-        ],
-        "landlord": "Heaney and Sons",
-        "rooms": 5
-    },
-    {
-        "id": 27,
-        "address": "2 Muir Junction",
-        "city": "Tulc\u00e1n",
-        "tenants": [
-            14
-        ],
-        "landlord": "Kirlin, DuBuque and Volkman",
-        "rooms": 1
-    },
-    {
-        "id": 28,
-        "address": "5204 8th Avenue",
-        "city": "Snizhne",
-        "tenants": [
-            11
-        ],
-        "landlord": "Koelpin-Johnston",
-        "rooms": 4
-    },
-    {
-        "id": 29,
-        "address": "3 Pond Center",
-        "city": "Helsingborg",
-        "tenants": [
-            6
-        ],
-        "landlord": "Weissnat LLC",
-        "rooms": 5
-    },
-    {
-        "id": 30,
-        "address": "769 Red Cloud Circle",
-        "city": "Bayan Qagan",
-        "tenants": [
-            19
-        ],
-        "landlord": "Labadie-Moore",
-        "rooms": 3
-    },
-    {
-        "id": 31,
-        "address": "49 Brickson Park Place",
-        "city": "Kuzhorskaya",
-        "tenants": [
-            7
-        ],
-        "landlord": "Stracke-Waters",
-        "rooms": 2
-    },
-    {
-        "id": 35,
-        "address": "Wisteria Lane",
-        "city": "Alabama",
-        "tenants": [
-            1
-        ],
-        "landlord": "Jenny",
-        "rooms": 2
-    },
-    {
-        "id": 36,
-        "address": "49 Brickson Park Place",
-        "city": "Kuzhorskaya",
-        "tenants": [
-            7
-        ],
-        "landlord": "Stracke-Waters",
-        "rooms": 2
-    }
-]
+[{"id":1,"address":"60634 Springs Place","city":"Guicheng","tenants":[24],"rooms":2},
+{"id":2,"address":"289 Merchant Plaza","city":"Daping","tenants":[4],"rooms":2},
+{"id":3,"address":"98136 Merrick Place","city":"Castêlo","tenants":[14],"rooms":5},
+{"id":4,"address":"78663 Menomonie Parkway","city":"Hwacheon","tenants":[27],"rooms":2},
+{"id":5,"address":"72 Mayfield Alley","city":"Macaé","tenants":[6],"rooms":1},
+{"id":6,"address":"604 Ridgeway Way","city":"Randusari","tenants":[8],"rooms":5},
+{"id":7,"address":"13 Roth Court","city":"Tampa","tenants":[21],"rooms":4},
+{"id":8,"address":"2504 Ruskin Road","city":"Tala","tenants":[14],"rooms":4},
+{"id":9,"address":"40141 Arizona Pass","city":"Talugtug","tenants":[5],"rooms":2},
+{"id":10,"address":"455 Nevada Hill","city":"Eirunepé","tenants":[1],"rooms":5},
+{"id":11,"address":"3 Blue Bill Park Park","city":"Cimo de Vila","tenants":[4],"rooms":1},
+{"id":12,"address":"4 Orin Drive","city":"Lidian","tenants":[19],"rooms":4},
+{"id":13,"address":"1691 Brickson Park Center","city":"Sagud-Bahley","tenants":[17],"rooms":3},
+{"id":14,"address":"900 Hayes Plaza","city":"Xumai","tenants":[22],"rooms":4},
+{"id":15,"address":"267 Bonner Terrace","city":"Yulin","tenants":[24],"rooms":1},
+{"id":16,"address":"0 Village Green Road","city":"Yukou","tenants":[4],"rooms":2},
+{"id":17,"address":"4 Ryan Drive","city":"Parlilitan","tenants":[28],"rooms":4},
+{"id":18,"address":"33 Troy Way","city":"Hŭngnam","tenants":[18],"rooms":2},
+{"id":19,"address":"86 Ruskin Center","city":"Pechersk","tenants":[23],"rooms":4},
+{"id":20,"address":"9 Boyd Junction","city":"Ninh Giang","tenants":[26],"rooms":3},
+{"id":21,"address":"63402 Hagan Crossing","city":"Goiânia","tenants":[19],"rooms":3},
+{"id":22,"address":"27 Macpherson Drive","city":"Yushugou","tenants":[26],"rooms":5},
+{"id":23,"address":"9342 Clove Pass","city":"Baganha","tenants":[11],"rooms":4},
+{"id":24,"address":"9885 Thompson Plaza","city":"Caála","tenants":[17],"rooms":1},
+{"id":25,"address":"6084 Cherokee Terrace","city":"Cizhu","tenants":[19],"rooms":5},
+{"id":26,"address":"94 Eliot Way","city":"Hoopstad","tenants":[17],"rooms":3},
+{"id":27,"address":"24807 Nevada Alley","city":"Malvas","tenants":[9],"rooms":2},
+{"id":28,"address":"16296 Ludington Street","city":"Sarov","tenants":[26],"rooms":5},
+{"id":29,"address":"3101 Melody Junction","city":"Segezha","tenants":[1],"rooms":2},
+{"id":30,"address":"1 Sauthoff Drive","city":"Reguenga","tenants":[5],"rooms":3}]
